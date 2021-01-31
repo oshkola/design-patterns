@@ -1,5 +1,3 @@
-#include <iostream>
-
 class Singleton
 {
 	Singleton() = default;
@@ -18,10 +16,7 @@ public:
 	}
 };
 
-
 int main()
 {
-
 	Singleton& s = Singleton::get_instance();
-
 }
