@@ -10,9 +10,9 @@ public:
 	//lazy initialization of _instance
 	static Singleton& get_instance()
 	{
-  	//static + local variable does the trick  
-        static Singleton _instance;
-	return _instance;
+  		//static + local variable does the trick  
+        	static Singleton _instance;
+		return _instance;
 	}
 };
 
