@@ -3,5 +3,5 @@ language: cpp
 compiler: gcc
   
 script:
-- g++ singleton.cpp -o singleton
+- g++ creational/singleton.cpp -o singleton
 - ./singleton
