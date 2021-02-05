@@ -6,11 +6,11 @@ using namespace std;
 //Product
 class Car
 {
-    public:
+public:
     string _model;
     int _weight;
     string _engine;
-   
+
     void show()
     {
         cout << "model : " << _model << endl;
@@ -21,25 +21,25 @@ class Car
 
 class AbstractBuilder
 {
-    protected:
+protected:
     Car car;
 
-    public:
-    virtual ~AbstractBuilder(){};
+public:
+    virtual ~AbstractBuilder() {};
     virtual void set_model() = 0;
     virtual void set_weight() = 0;
     virtual void build_engine() = 0;
     virtual Car get_car()
     {
         return car;
-    }  
+    }
 };
 
 //concrete builder 1
 class MaserattiBuilder : public AbstractBuilder
 {
-    public:
-    virtual ~MaserattiBuilder(){};
+public:
+    virtual ~MaserattiBuilder() {};
     virtual void set_model() override
     {
         car._model = "Maseratti";
@@ -51,15 +51,15 @@ class MaserattiBuilder : public AbstractBuilder
     virtual void build_engine() override
     {
         car._engine = "V8";
-       
+
     }
 };
 
 //concrete builder 1
 class FerrariBuilder : public AbstractBuilder
 {
-    public:
-    virtual ~FerrariBuilder(){};
+public:
+    virtual ~FerrariBuilder() {};
     virtual void set_model() override
     {
         car._model = "Ferrari";
@@ -71,26 +71,25 @@ class FerrariBuilder : public AbstractBuilder
     virtual void build_engine() override
     {
         car._engine = "F136";
-       
     }
 };
 
 class Director
 {
     AbstractBuilder* builder;
-   
-    public:
-   
+
+public:
+
     void set_builder(AbstractBuilder * b)
     {
         builder = b;
     }
-   
+
     Car get_car()
     {
         return builder->get_car();
     }
-   
+
     void construct_car()
     {
         builder->set_model();
@@ -107,7 +106,7 @@ int main()
     d.construct_car();
     Car maseratti = d.get_car();
     maseratti.show();
-   
+
     FerrariBuilder f;
     d.set_builder(&f);
     d.construct_car();
