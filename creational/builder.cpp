@@ -79,17 +79,14 @@ class Director
     AbstractBuilder* builder;
 
 public:
-
     void set_builder(AbstractBuilder * b)
     {
         builder = b;
     }
-
     Car get_car()
     {
         return builder->get_car();
     }
-
     void construct_car()
     {
         builder->set_model();
