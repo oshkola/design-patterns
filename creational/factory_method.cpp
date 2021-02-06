@@ -7,7 +7,7 @@ using namespace std;
 class Lexeme
 {
 public:
-	virtual ~Lexeme(){}
+	virtual ~Lexeme() {}
 	virtual void show_info() const = 0;
 };
 
@@ -15,7 +15,7 @@ public:
 class Operator: public Lexeme
 {
 public:
-	virtual ~Operator(){}
+    virtual ~Operator() {}
 	virtual void show_info() const override
 	{
 		cout << "operator" << endl;
@@ -26,7 +26,7 @@ public:
 class Identifier: public Lexeme
 {
 public:
-	virtual ~Identifier(){}
+	virtual ~Identifier() {}
 	virtual void show_info() const override
 	{
 		cout << "identifier" << endl;
@@ -37,7 +37,7 @@ public:
 class Number: public Lexeme
 {
 public:
-	virtual ~Number(){}
+	virtual ~Number() {}
 	virtual void show_info() const override
 	{
 		cout << "number" << endl;
@@ -47,10 +47,8 @@ public:
 //abstarct creator
 class LexemeGenerator
 {
-protected:
-	Lexeme* _lexeme;
 public:
-	virtual ~LexemeGenerator(){}
+	virtual ~LexemeGenerator() {}
 	virtual Lexeme* generate_lexeme() const = 0;
 };
 
@@ -58,8 +56,8 @@ public:
 class OpGenerator: public LexemeGenerator
 {
 public:
-	virtual ~OpGenerator(){}
-	virtual Lexeme* generate_lexeme() const override 
+	virtual ~OpGenerator() {}
+	virtual Lexeme* generate_lexeme() const override
 	{
 		return new Operator();
 	}
@@ -67,10 +65,10 @@ public:
 
 //concrete creator 2
 class IdGenerator: public LexemeGenerator
-{	
+{
 public:
-	virtual ~IdGenerator(){}
-	virtual Lexeme* generate_lexeme() const override 
+	virtual ~IdGenerator() {}
+	virtual Lexeme* generate_lexeme() const override
 	{
 		return new Identifier();
 	}
@@ -80,8 +78,8 @@ public:
 class NumGenerator: public LexemeGenerator
 {
 public:
-	virtual ~NumGenerator(){}
-	virtual Lexeme* generate_lexeme() const override 
+	virtual ~NumGenerator() {}
+	virtual Lexeme* generate_lexeme() const override
 	{
 		return new Number();
 	}
@@ -91,14 +89,14 @@ int main()
 {
 	vector<Lexeme*> lexemes;
 	LexemeGenerator* op_generator = new OpGenerator();
-	LexemeGenerator* id_generator = new IdGenerator(); 
+	LexemeGenerator* id_generator = new IdGenerator();
 	LexemeGenerator* num_generator = new NumGenerator();
 
 	lexemes.push_back(op_generator->generate_lexeme());
 	lexemes.push_back(id_generator->generate_lexeme());
 	lexemes.push_back(num_generator->generate_lexeme());
 
-	for(auto token: lexemes)
+	for (auto token : lexemes)
 		token->show_info();
 
 	delete op_generator;
