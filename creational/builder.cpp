@@ -25,7 +25,7 @@ public:
     {
         _engine = engine;
     }
-    void show()
+    void show() const
     {
         cout << "model : " << _model << endl;
         cout << "weight : " << _weight << endl;
