@@ -1,16 +1,30 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::string;
 
 //Product
 class Car
 {
-public:
     string _model;
     int _weight;
     string _engine;
+public:
 
+    void set_model(string model)
+    {
+        _model = model;
+    }
+    void set_weight(int weight)
+    {
+        _weight = weight;
+    }
+    void set_engine(string engine)
+    {
+        _engine = engine;
+    }
     void show()
     {
         cout << "model : " << _model << endl;
@@ -42,15 +56,15 @@ public:
     virtual ~MaserattiBuilder() {};
     virtual void set_model() override
     {
-        car._model = "Maseratti";
+        car.set_model("Maseratti");
     }
     virtual void set_weight() override
     {
-        car._weight = 1880;
+        car.set_weight(1880);
     }
     virtual void build_engine() override
     {
-        car._engine = "V8";
+        car.set_engine("V8");
 
     }
 };
@@ -62,15 +76,16 @@ public:
     virtual ~FerrariBuilder() {};
     virtual void set_model() override
     {
-        car._model = "Ferrari";
+        car.set_model("Ferrari");
     }
     virtual void set_weight() override
     {
-        car._weight = 1565;
+        car.set_weight(1565);
     }
     virtual void build_engine() override
     {
-        car._engine = "F136";
+        car.set_engine("F136");
+
     }
 };
 
