@@ -69,7 +69,7 @@ public:
     }
 };
 
-//concrete builder 1
+//concrete builder 2
 class FerrariBuilder : public AbstractBuilder
 {
 public:
