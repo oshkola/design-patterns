@@ -11,8 +11,8 @@ class Car
     string _model;
     int _weight;
     string _engine;
-public:
 
+public:
     void set_model(string model)
     {
         _model = model;
