@@ -15,7 +15,7 @@ public:
 class Operator: public Lexeme
 {
 public:
-    virtual ~Operator() {}
+	virtual ~Operator() {}
 	virtual void show_info() const override
 	{
 		cout << "operator" << endl;
