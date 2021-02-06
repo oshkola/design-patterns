@@ -5,7 +5,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
-//Product
+//Product 
 class Car
 {
     string _model;
