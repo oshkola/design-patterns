@@ -101,14 +101,11 @@ public:
 
 int main()
 {
-	Recruiter* recruiter = new RomanRecruiter();
-	recruiter->hire_infantry()->show_info();
-	recruiter->hire_cavalry()->show_info();
 
-	Recruiter* recruiter2 = new MongolRecruiter();
-	recruiter2->hire_infantry()->show_info();
-	recruiter2->hire_cavalry()->show_info();
-
-	delete recruiter;
-	delete recruiter2;
+	Recruiter* recruiters[2]{new RomanRecruiter(), new MongolRecruiter()};
+	for(auto x: recruiters)
+	{
+		x->hire_infantry()->show_info();
+		x->hire_cavalry()->show_info();
+	}
 }
