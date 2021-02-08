@@ -101,7 +101,6 @@ public:
 
 int main()
 {
-
 	Recruiter* recruiters[2]{new RomanRecruiter(), new MongolRecruiter()};
 	for(auto x: recruiters)
 	{
