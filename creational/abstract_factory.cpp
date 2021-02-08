@@ -12,7 +12,6 @@ public:
 };
 
 class Swordsman : public Infantry
-
 {
 public:
 	virtual ~Swordsman() {}
