@@ -1,3 +1,5 @@
+Sequence             | Class
+:-------------------------:|:-------------------------:
+![](diagrams/singleton.svg))  | )
 
-![](diagrams/singleton.svg)
 
