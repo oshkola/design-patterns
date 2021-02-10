@@ -18,7 +18,7 @@ Foo1 -> Foo5 : To database
 Foo1 -> Foo6 : To collections
 @enduml
 ```
-![](./Singleton.svg)
+![](./singleton.svg)
 ![](./md-sample-sequence.svg)
 
 `@startuml` can be omitted. This action complements `@startuml` and `@enduml`.
