@@ -2,9 +2,9 @@
 
 
 
- ### Creational
-  + Factory method
-  + Abstract factory
-  + Builder
-  + Prototype
-  + Singleton
+ ## Creational
+  - [X] Factory method
+  - [X] Abstract factory
+  - [X] Builder
+  - [X] Prototype
+  - [X] Singleton
