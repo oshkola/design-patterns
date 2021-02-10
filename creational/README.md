@@ -1,6 +1,6 @@
 <div hidden>
 ```
-@startuml
+@startuml Singleton
 skinparam style strictuml
 client -> Singleton : get_instance()
 @enduml
