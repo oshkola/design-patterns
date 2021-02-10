@@ -1,4 +1,5 @@
-class             | sequence
+## Singleton
+class                      | sequence
 :-------------------------:|:-------------------------:
   | ![](diagrams/singleton.svg)
 
