@@ -1,6 +1,16 @@
-@startuml singleton
+@startuml singleton_sequence
 
 skinparam style strictuml
 client -> Singleton: get_instance()
+
+@enduml
+
+@startuml singleton_class
+
+class Singleton
+{
+	-Singleton()
+	+{static} Signleton& get_instance()
+}
 
 @enduml
