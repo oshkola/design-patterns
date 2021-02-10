@@ -1,6 +1,6 @@
 ## Singleton
 class                      | sequence
 :-------------------------:|:-------------------------:
-  | ![](diagrams/singleton.svg)
+![](diagrams/singleton_class.svg) | ![](diagrams/singleton_sequence.svg)
 
 
