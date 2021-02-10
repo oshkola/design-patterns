@@ -3,7 +3,7 @@
 
 
  ### Creational
-  + Factory method
+  - [X] Factory method
   + Abstract factory
   + Builder
   + Prototype
