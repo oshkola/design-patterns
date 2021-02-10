@@ -6,4 +6,4 @@ client -> Singleton : get_instance()
 @enduml
 ```
  </div> 
-![](Singleton.svg)
+![](singleton.svg)
