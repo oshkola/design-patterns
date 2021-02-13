@@ -1,3 +1,5 @@
+`Singleton
+
 @startuml singleton_sequence
 
 skinparam style strictuml
@@ -10,7 +12,51 @@ client -> Singleton: get_instance()
 class Singleton
 {
 	-Singleton()
-	+{static} Signleton& get_instance()
+	+{static} Singleton& get_instance()
 }
 
+@enduml
+
+`Factory method
+
+@startuml factory_method_sequence
+
+skinparam style strictuml
+client -> concrete_factory : generate_product()
+client -> concrete_product : do_some_work()
+
+@enduml
+
+`Factory method
+
+@startuml factory_method_class
+
+abstract class Product
+class Concrete_Creator_1
+class Concrete_Creator_2
+
+Creator <|– Concrete_Creator_1
+Concrete_Creator_2 –|> Creator 
+
+Product <|– Concrete_Product_1
+Product <|– Concrete_Product_2
+
+
+
+
+@enduml
+
+@startuml smth
+[A]
+[B]
+[C]
+[D]
+[E]
+[F]
+
+A->D
+B->D
+C->D
+D->E
+D->F
 @enduml

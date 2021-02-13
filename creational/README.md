@@ -3,7 +3,7 @@ class                      | sequence
 :-------------------------:|:-------------------------:
 ![](diagrams/singleton_class.svg) | ![](diagrams/singleton_sequence.svg)
 
-## Singleton
+## Factory method
 class                      | sequence
 :-------------------------:|:-------------------------:
-![](diagrams/singleton_class.svg) | ![](diagrams/singleton_sequence.svg)
+ | ![](diagrams/factory_method_sequence.svg)
