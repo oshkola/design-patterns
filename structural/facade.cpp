@@ -49,10 +49,8 @@ public:
 	}	
 };
 
-
 //auxiliary enum
 enum class regime{cotton, wool};
-
 
 //facade
 class washing_machine
@@ -105,7 +103,6 @@ public:
 		_dryer.dry(40);
 		_engine.stop();
 	}
-
 };
 
 void client_code(washing_machine* machine)
